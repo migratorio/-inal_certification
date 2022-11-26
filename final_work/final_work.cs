@@ -1,4 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿/*Программа формирования  строкового массива с длиной строки 
+не более 3 символов из произвольного пользовательского массива.
+*/
 Console.Clear();
 
 Console.WriteLine("Наберите 'END', если хотите прекратить ввод");
@@ -50,6 +52,7 @@ static string[] GetArrayFixedLength(string[] arr)
 //Функция выводит в консоль нпчальный и отфильтрованный массивы
 static void PrintResult(string[] arr1, string[] arr2)
 {
+    Console.WriteLine();
     for(int i = 0; i < arr1.Length; i++)
     {
         if(i < arr1.Length -1)
@@ -62,6 +65,6 @@ static void PrintResult(string[] arr1, string[] arr2)
         if(i < arr2.Length -1)
             Console.Write($"'{arr2[i]}',");
         else
-            Console.Write(arr2[i]);
+            Console.Write($"'{arr1[i]}'");
     }
 }
